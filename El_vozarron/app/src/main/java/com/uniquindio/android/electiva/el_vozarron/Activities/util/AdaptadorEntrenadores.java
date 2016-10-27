@@ -1,5 +1,6 @@
 package com.uniquindio.android.electiva.el_vozarron.Activities.util;
 
+import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,11 +8,10 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.uniquindio.android.electiva.el_vozarron.Activities.vo.Entrenador;
-import com.uniquindio.android.electiva.el_vozarron.Activities.vo.Personaje;
+import com.uniquindio.android.electiva.el_vozarron.Activities.ListaEntranadores;
+import com.uniquindio.android.electiva.el_vozarron.Activities.logic.TrainerDetails;
+import com.uniquindio.android.electiva.el_vozarron.Activities.vo.Trainer;
 import com.uniquindio.android.electiva.el_vozarron.R;
-
-import org.w3c.dom.EntityReference;
 
 import java.util.ArrayList;
 
@@ -20,9 +20,12 @@ import java.util.ArrayList;
  */
 public class AdaptadorEntrenadores  extends RecyclerView.Adapter<AdaptadorEntrenadores.EntrenadorViewHolder> {
 
-    private ArrayList <Entrenador> entrenadores;
+    private ArrayList <Trainer> entrenadores;
 
-    public AdaptadorEntrenadores(ArrayList<Entrenador> entrenadores) {
+
+
+
+    public AdaptadorEntrenadores(ArrayList<Trainer> entrenadores) {
         this.entrenadores = entrenadores;
     }
 
@@ -32,14 +35,17 @@ public class AdaptadorEntrenadores  extends RecyclerView.Adapter<AdaptadorEntren
                 .inflate(R.layout.resumen_entrenadores, parent, false);
         EntrenadorViewHolder peliculaVH = new
                 EntrenadorViewHolder(itemView);
+
+
+
         return peliculaVH;
     }
 
     @Override
     public void onBindViewHolder(EntrenadorViewHolder holder, int position) {
 
-        Entrenador entrenador= entrenadores.get(position);
-        holder.binEntrenador(entrenador);
+        Trainer trainer = entrenadores.get(position);
+        holder.binEntrenador(trainer);
     }
 
     @Override
@@ -47,8 +53,10 @@ public class AdaptadorEntrenadores  extends RecyclerView.Adapter<AdaptadorEntren
         return entrenadores.size();
     }
 
+
+
     public static class EntrenadorViewHolder
-            extends RecyclerView.ViewHolder {
+            extends RecyclerView.ViewHolder  {
         private TextView txtNombrePresonaje;
         private TextView txtGenero;
         private ImageView imagen;
@@ -61,15 +69,24 @@ public class AdaptadorEntrenadores  extends RecyclerView.Adapter<AdaptadorEntren
                     itemView.findViewById(R.id.genero);
             imagen=(ImageView)itemView.findViewById(R.id.imagenEntrenador);
 
+
+            //picture = (ImageView) findViewById(R.id.imagenEntrenador);
+
+
+
         }
-        public void binEntrenador(Entrenador entrenador) {
-            txtNombrePresonaje.setText(entrenador.getNombre());
-            txtGenero.setText(entrenador.getGenero());
+        public void binEntrenador(Trainer trainer) {
+            txtNombrePresonaje.setText(trainer.getNombre());
+            txtGenero.setText(trainer.getGenero());
 
 
-            imagen.setImageResource(entrenador.getFoto());
+             imagen.setImageResource(trainer.getFoto());
+
         }
 
 
+
+
+        }
     }
-}
+

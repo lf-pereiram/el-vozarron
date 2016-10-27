@@ -53,6 +53,13 @@ public class AdaptadorDePersonaje extends RecyclerView.Adapter<AdaptadorDePerson
         private TextView txtNombrePresonaje;
         private TextView txtFechaNacimiento;
         private ImageView imagen;
+       // private ImageView imageStatus;
+        private  TextView job;
+        private  TextView votes;
+        private  TextView url;
+        private  TextView trainer;
+
+
         public PersonajeViewHolder(View itemView) {
             super(itemView);
             txtNombrePresonaje = (TextView)
@@ -60,14 +67,39 @@ public class AdaptadorDePersonaje extends RecyclerView.Adapter<AdaptadorDePerson
             txtFechaNacimiento = (TextView)
                     itemView.findViewById(R.id.fecha_nacimiento);
             imagen=(ImageView)itemView.findViewById(R.id.imagen);
-
+           // imageStatus=(ImageView)itemView.findViewById(R.id.imageView2);
+            job=(TextView) itemView.findViewById(R.id.textView14SingerJob);
+            votes=(TextView) itemView.findViewById(R.id.textView1SingerVotes);
+            url=(TextView) itemView.findViewById(R.id.textViewSingerLink);
+            trainer=(TextView) itemView.findViewById(R.id.textView14NombreTrainer);
         }
         public void binPersonaje(Personaje personaje) {
             txtNombrePresonaje.setText(personaje.getNombre());
-            txtFechaNacimiento.setText(personaje.getFechaNacimiento().toString()
-            );
+            txtFechaNacimiento.setText(personaje.getFechaNacimiento().toString());
 
             imagen.setImageResource(personaje.getFoto());
+
+
+            job.setText(personaje.getOcupacion());
+            url.setText(personaje.getUrl());
+
+           // imageStatus.setImageResource(R.drawable.active);
+            //trainer.setText(personaje.getEntrenador());
+           //votes.setText(personaje.getNumeroVotos());
+/*
+                    if(personaje.isEstado()==true) {
+
+                        imageStatus.setImageResource(R.drawable.active);
+                    }else {
+
+                        imageStatus.setImageResource(R.drawable.inactive);
+
+                    }
+
+*/
+
+
+
         }
 
 

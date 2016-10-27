@@ -12,15 +12,23 @@
     android:id="@+id/resumen_personajes">
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:padding="16dp"
         android:background="#000000">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/active"
+            android:id="@+id/imageView2"
+            android:layout_above="@+id/textView1SingerVotes"
+            android:layout_alignEnd="@+id/textView1SingerVotes" />
 
         <ImageView
             android:id="@+id/imagen"
             android:src="@drawable/personaje"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="100dp"
             android:maxHeight="10dp"
             android:layout_marginRight="16dp"
             android:layout_below="@+id/fecha_nacimiento"
@@ -42,6 +50,72 @@
             android:layout_alignStart="@+id/nombre"
             android:layout_below="@+id/nombre"
             android:textColor="#ffffff" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="link: "
+            android:id="@+id/textViewSingerLink"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/imagen"
+            android:layout_alignStart="@+id/imagen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Trainer:"
+            android:id="@+id/textViewEntrandorDelConcursante"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/textViewSingerLink"
+            android:layout_alignStart="@+id/textViewSingerLink" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Job:"
+            android:id="@+id/textView14SingerJob"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/textViewEntrandorDelConcursante"
+            android:layout_alignStart="@+id/textViewEntrandorDelConcursante" />
+
+        <TextView
+            android:id="@+id/textView1SingerVotes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000 Votes"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/nombre"
+            android:layout_alignEnd="@+id/imagen" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/imageView4"
+            android:src="@drawable/active"
+            android:layout_alignBottom="@+id/textView14SingerJob"
+            android:layout_alignEnd="@+id/imagen" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView14"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/textView14SingerJob"
+            android:layout_alignEnd="@+id/nombre" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:id="@+id/textView15"
+            android:textColor="#ffffff"
+            android:layout_below="@+id/imageView4"
+            android:layout_toEndOf="@+id/textViewEntrandorDelConcursante" />
+
     </RelativeLayout>
 </android.support.v7.widget.CardView>
 

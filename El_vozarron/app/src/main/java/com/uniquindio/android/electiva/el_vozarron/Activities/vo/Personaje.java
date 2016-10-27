@@ -8,17 +8,32 @@ import java.util.Date;
 public class Personaje {
 
         private String nombre;
-        private Date fechaNacimiento;
+        private String fechaNacimiento;
         private String url;
         private String entrenador;
         private String ocupacion;
         private int numeroVotos;
         private int foto;
+        private boolean estado;
 
-    public Personaje(String nombre, Date fechaNacimiento, int foto) {
+
+    public boolean isEstado() {
+        return estado;
+    }
+
+    public void setEstado(boolean estado) {
+        this.estado = estado;
+    }
+
+    public Personaje(String nombre, String fechaNacimiento, String url, String entrenador, String ocupacion, int numeroVotos, int foto, boolean estado) {
         this.nombre = nombre;
         this.fechaNacimiento = fechaNacimiento;
+        this.url = url;
+        this.entrenador = entrenador;
+        this.ocupacion = ocupacion;
+        this.numeroVotos = numeroVotos;
         this.foto = foto;
+        this.estado=estado;
     }
 
     public int getFoto() {
@@ -37,11 +52,11 @@ public class Personaje {
         this.nombre = nombre;
     }
 
-    public Date getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
+    public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
 
