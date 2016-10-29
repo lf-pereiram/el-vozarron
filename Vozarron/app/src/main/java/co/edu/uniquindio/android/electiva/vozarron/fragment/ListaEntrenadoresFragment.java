@@ -64,7 +64,7 @@ public class ListaEntrenadoresFragment extends Fragment implements AdaptadorEntr
 
         entrenadores = new ArrayList<>();
 
-        entrenadores.add(new Entrenador("Adele", "Pop", R.drawable.adele2, "Adele was born in North London, England, on May 5, 1988, " +
+        entrenadores.add(new Entrenador(0,"Adele", "Pop", R.drawable.adele2, "Adele was born in North London, England, on May 5, 1988, " +
                 "eventually attending the performing arts BRIT School. Her first two albums," +
                 " 19 and 21, earned her critical praise and a level of commercial success " +
                 "unsurpassed among her peers, with the artist selling millions of albums " +
@@ -72,7 +72,7 @@ public class ListaEntrenadoresFragment extends Fragment implements AdaptadorEntr
                 " Oscar for the James Bond track \"Skyfall.\" After becoming a mom, Adele" +
                 " returned to the charts in autumn 2015 with the ballad \"Hello,\" the lead " +
                 "single for her forthcoming album 25."));
-        entrenadores.add(new Entrenador("Rihanna", "Hip-Pop", R.drawable.rihanna2, "Robyn Rihanna Fenty (/riˈænə/;[2] born February 20, 1988)" +
+        entrenadores.add(new Entrenador(1,"Rihanna", "Hip-Pop", R.drawable.rihanna2, "Robyn Rihanna Fenty (/riˈænə/;[2] born February 20, 1988)" +
                 " is a Barbadian singer and songwriter. Born in Saint Michael and raised" +
                 " in Bridgetown, she first entered the music industry by recording demo " +
                 "tapes under the direction of record producer Evan Rogers in 2003." +
@@ -82,7 +82,7 @@ public class ListaEntrenadoresFragment extends Fragment implements AdaptadorEntr
                 "album Music of the Sun and its follow-up A Girl like Me (2006), which charted" +
                 " on the top 10 of the U.S. Billboard 200 and respectively produced the hit" +
                 " singles \"Pon de Replay\" and \"SOS\"."));
-        entrenadores.add(new Entrenador("Madonna", "Pop", R.drawable.madonna2, "Madonna Louise Ciccone (/tʃɪˈkoʊni/; born August 16, 1958) " +
+        entrenadores.add(new Entrenador(2, "Madonna", "Pop", R.drawable.madonna2, "Madonna Louise Ciccone (/tʃɪˈkoʊni/; born August 16, 1958) " +
                 "is an American singer, songwriter, dancer, actress, and businesswoman. " +
                 "She achieved popularity by pushing the boundaries of lyrical content in " +
                 "mainstream popular music and imagery in her music videos, which became " +

@@ -19,14 +19,15 @@
     <Button
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:text="Competidores"
+        android:text="Participantes"
         android:id="@+id/btnCompetidores"
         android:background="#000000"
         android:textColor="#ffffff"
         android:layout_alignBaseline="@+id/btnEntrenadores"
         android:layout_alignBottom="@+id/btnEntrenadores"
         android:layout_alignEnd="@+id/imagen"
-        android:layout_marginEnd="22dp" />
+        android:layout_marginEnd="22dp"
+        android:onClick="verParticipantes"/>
 
     <ImageView
         android:id="@+id/imagen"

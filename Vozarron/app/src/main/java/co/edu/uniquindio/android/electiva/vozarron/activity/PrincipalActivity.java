@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import co.edu.uniquindio.android.electiva.vozarron.R;
+import co.edu.uniquindio.android.electiva.vozarron.vo.Participante;
 
 public class PrincipalActivity extends AppCompatActivity {
 
@@ -17,6 +18,11 @@ public class PrincipalActivity extends AppCompatActivity {
 
     public void verEntrenadores (View view) {
         Intent intent = new Intent(this, EntrenadorActivity.class);
+        startActivity(intent);
+    }
+
+    public void verParticipantes (View view) {
+        Intent intent = new Intent(this, ParticipanteActivity.class);
         startActivity(intent);
     }
 }

@@ -20,11 +20,21 @@ public class Entrenador implements Parcelable {
     private int foto;
     private ArrayList<Participante> participantes;
 
-    public Entrenador(String nombre, String genero, int foto, String historial) {
+    public Entrenador(int id, String nombre, String genero, int foto, String historial) {
+        this.id = id;
         this.nombre = nombre;
         this.genero = genero;
         this.foto = foto;
         this.historial = historial;
+    }
+
+    public Entrenador(int id, String nombre, String genero, String historial, int foto, ArrayList<Participante> participantes) {
+        this.id = id;
+        this.nombre = nombre;
+        this.genero = genero;
+        this.historial = historial;
+        this.foto = foto;
+        this.participantes = participantes;
     }
 
     protected Entrenador(Parcel in) {

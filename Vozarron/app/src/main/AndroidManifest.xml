@@ -20,6 +20,11 @@
             android:name=".activity.DetalleEntrenadorActivity"
             android:label="@string/title_activity_detalle_entrenador"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".activity.ParticipanteActivity"></activity>
+        <activity
+            android:name=".activity.DetalleParticipanteActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
     </application>
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
