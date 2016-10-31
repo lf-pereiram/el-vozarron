@@ -40,13 +40,13 @@ public class DetalleParticipanteFragment extends Fragment implements View.OnClic
         txtNombre.setText(participante.getNombre());
 
         txtEdad = (TextView) getView().findViewById(R.id.edad_de_detalle_participante);
-        txtEdad.setText("Edad: " + Integer.toString(participante.getEdad()));
+        txtEdad.setText(Integer.toString(participante.getEdad()));
 
         txtEntrenador = (TextView) getView().findViewById(R.id.entrenador_de_detalle_participante);
-        txtEntrenador.setText("Entrenador: " + participante.idEntrenadorToString(participante.getEntrenador()));
+        txtEntrenador.setText(participante.idEntrenadorToString(participante.getEntrenador()));
 
         txtRol = (TextView) getView().findViewById(R.id.rol_de_detalle_participante);
-        txtRol.setText("Tipo Vinculación: " + participante.rolToString(participante.getRol()));
+        txtRol.setText(participante.rolToString(participante.getRol()));
 
         foto = (ImageView) getView().findViewById(R.id.imagen_detalle);
         foto.setImageResource(participante.getFoto());

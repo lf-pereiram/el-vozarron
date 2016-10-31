@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#8d0202">
+    android:background="@drawable/gradient">
 
     <ImageView
         android:layout_width="match_parent"
@@ -54,10 +55,12 @@
 
             <Button
                 android:id="@+id/btn_participantes"
-                android:layout_width="wrap_content"
+                android:layout_width="136dp"
                 android:layout_height="wrap_content"
                 android:text="Participantes"
-                android:layout_marginLeft="125dp"/>
+                android:layout_marginLeft="125dp"
+                android:background="#000000"
+                android:textColor="#ffffff"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

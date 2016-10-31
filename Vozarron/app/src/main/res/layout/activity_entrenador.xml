@@ -9,12 +9,27 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="co.edu.uniquindio.android.electiva.vozarron.activity.EntrenadorActivity"
-    android:background="#8d0202" >
+    android:background="@drawable/gradient" >
 
     <fragment
         android:id="@+id/fragmento_lista_entrenadores"
         class="co.edu.uniquindio.android.electiva.vozarron.fragment.ListaEntrenadoresFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_lista_entrenadores"
+        android:layout_below="@+id/titulo_entrenadores"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Entrenadores"
+        android:id="@+id/titulo_entrenadores"
+        android:textColor="#ffffff"
+        android:textSize="30dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
